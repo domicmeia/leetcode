@@ -24,8 +24,8 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
         }
 
         sum := n1 + n2 + carry
-        current.Next = &ListNode{Val: sum % 10}
         carry = sum / 10
+        current.Next = &ListNode{Val: sum % 10}
         current = current.Next
     }
 
