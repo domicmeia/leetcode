@@ -1,3 +1,8 @@
+func init() {
+	debug.FreeOSMemory()
+	debug.SetGCPercent(0)
+}
+
 func maxArea(height []int) int {
     max, start, end := 0, 0, len(height) - 1
     for start < end {
